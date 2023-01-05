@@ -9,4 +9,5 @@ export interface Gift {
 	thumbnail: string | null;
 	purchase_link: string | null;
 	category: string | null;
+	bought: boolean;
 }
