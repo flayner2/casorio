@@ -1,7 +1,15 @@
 <script>
 	import '../app.css';
+	import {page} from '$app/stores'; 
 
 	let showMenu = false;
+
+	/**@type import("$lib/types/components").Navbar */
+	const nav = [
+		{title: 'Nós', path: '/nos', preload: 'off'}, 
+		{title: 'Casório', path: '/casorio', preload: 'off'}, 
+		{title: 'Lista Presentes', path: '/presentes', preload: 'hover'}
+	];
 
 	function toggleNavbar() {
 		showMenu = !showMenu;
@@ -14,7 +22,7 @@
 			class="text-xl font-bold text-gray-800 md:text-xl hover:text-blue-400 flex md:flex-col"
 			href="/"
 		>
-			<span>Maycon & <br class="hidden md:block" /> Rafaela</span>
+			<span class="font-title uppercase">Maycon & <br class="hidden md:block" /> Rafaela</span>
 		</a>
 
 		<div on:click={toggleNavbar} on:keydown={toggleNavbar} class="flex md:hidden">
@@ -45,15 +53,12 @@
 			? 'flex'
 			: 'hidden'}"
 	>
-		<a class="text-gray-800 hover:text-blue-400 uppercase" href="/nos">Nós</a>
-		<a class="text-gray-800 hover:text-blue-400 uppercase" href="/casorio">Casório</a>
-		<a
-			class="text-gray-800 hover:text-blue-400 uppercase"
-			href="/presentes"
-			data-sveltekit-preload-data="hover">Lista de Presentes</a
-		>
+	{#each nav as navItem}
+		<a class="text-gray-800 hover:text-blue-400 uppercase {$page.route.id == navItem.path ? 'border-b-2 border-red-500' : 'border-b-2 border-transparent'}" href={navItem.path} data-sveltekit-preload-data={navItem.preload}>{navItem.title}</a>
+	{/each}
 	</div>
 </nav>
+
 <slot />
 
 <footer
