@@ -1,14 +1,14 @@
 <script>
 	import '../app.css';
-	import {page} from '$app/stores'; 
+	import { page } from '$app/stores';
 
 	let showMenu = false;
 
 	/**@type import("$lib/types/components").Navbar */
 	const nav = [
-		{title: 'Nós', path: '/nos', preload: 'off'}, 
-		{title: 'Casório', path: '/casorio', preload: 'off'}, 
-		{title: 'Lista Presentes', path: '/presentes', preload: 'hover'}
+		{ title: 'Nós', path: '/nos', preload: 'off' },
+		{ title: 'Casório', path: '/casorio', preload: 'off' },
+		{ title: 'Lista Presentes', path: '/presentes', preload: 'hover' }
 	];
 
 	function toggleNavbar() {
@@ -53,9 +53,15 @@
 			? 'flex'
 			: 'hidden'}"
 	>
-	{#each nav as navItem}
-		<a class="text-gray-800 hover:text-blue-400 uppercase {$page.route.id == navItem.path ? 'border-b-2 border-red-500' : 'border-b-2 border-transparent'}" href={navItem.path} data-sveltekit-preload-data={navItem.preload}>{navItem.title}</a>
-	{/each}
+		{#each nav as navItem}
+			<a
+				class="text-gray-800 hover:text-blue-400 uppercase {$page.route.id == navItem.path
+					? 'border-b-2 border-red-500'
+					: 'border-b-2 border-transparent'}"
+				href={navItem.path}
+				data-sveltekit-preload-data={navItem.preload}>{navItem.title}</a
+			>
+		{/each}
 	</div>
 </nav>
 
