@@ -7,6 +7,7 @@
 @layer base {
 	html {
 		font-family: Varela Round, system-ui, sans-serif;
+		@apply bg-bg;
 	}
 
 	h1,
@@ -16,5 +17,35 @@
 	h5 {
 		font-family: Nunito, system-ui, sans-serif;
 		font-weight: extra-bold;
+	}
+}
+
+@layer components {
+	input[type='range'] {
+		@apply appearance-none bg-transparent;
+	}
+
+	input[type='range']::-webkit-slider-runnable-track {
+		@apply bg-casorioBlue rounded-full;
+	}
+
+	input[type='range']::-moz-range-track {
+		@apply bg-casorioBlue rounded-full;
+	}
+
+	input[type='range']::-ms-track {
+		@apply bg-casorioBlue rounded-full;
+	}
+
+	input[type='range']::-webkit-slider-thumb {
+		@apply bg-casorioBlue rounded-full border-transparent;
+	}
+
+	input[type='range']::-moz-range-thumb {
+		@apply bg-casorioBlue rounded-full border-transparent;
+	}
+
+	input[type='range']::-ms-thumb {
+		@apply bg-casorioBlue rounded-full border-transparent;
 	}
 }
