@@ -1,12 +1,32 @@
-<script>
-	/** @type {import('./$types').PageData} */
-	export let data;
+<script lang="ts">
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 	const { gifts } = data;
+
+	let sliderValue: number;
+
+	function setSliderValue(event: Event) {
+		const target = event.target as HTMLInputElement;
+		sliderValue = parseInt(target.value);
+	}
 </script>
 
 <svelte:head>
 	<title>Casório do Mayco e da Rafa</title>
 </svelte:head>
+
+<input
+	type="range"
+	name="test"
+	id="test"
+	min={0}
+	max={5000}
+	step={1}
+	value={sliderValue}
+	on:change={setSliderValue}
+/>
+
 {#each gifts as gift}
 	<div class="container mx-auto max-w-sm overflow-hidden flex flex-col items-center">
 		<a
