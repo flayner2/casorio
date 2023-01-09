@@ -17,14 +17,16 @@
 </script>
 
 <nav
-	class="ml-20 mr-20 2xl:mr-32 py-8 mx-auto md:flex md:justify-between md:items-center md:h-[20vh] text-casorioBlue font-title uppercase"
+	class="md:ml-20 md:mr-20 mr-5 ml-5 2xl:mr-32 py-8 mx-auto md:flex md:justify-between md:items-center md:h-[20vh] text-casorioBlue font-title uppercase"
 	id="top"
 >
 	<div class="flex items-center justify-between ">
-		<img src="/brasao.svg" alt="Brasão Maycon e Rafaela" class="mr-5" />
-		<a class="text-xl md:leading-5 md:text-xl hover:text-blue-400 flex md:flex-col" href="/">
-			Maycon e <br class="hidden md:block" /> Rafaela
-		</a>
+		<div class="flex items-center justify-between ml-16 md:m-0">
+			<img src="/brasao.svg" alt="Brasão Maycon e Rafaela" class="mr-5" />
+			<a class="text-lg md:leading-5 md:text-xl hover:text-blue-400 flex md:flex-col" href="/">
+				Maycon e <br /> Rafaela
+			</a>
+		</div>
 
 		<div on:click={toggleNavbar} on:keydown={toggleNavbar} class="flex md:hidden">
 			<button
@@ -35,9 +37,8 @@
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
 					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="w-6 h-6"
+					stroke-width="2.5"
+					class="w-6 h-6 stroke-casorioPink"
 				>
 					<path
 						stroke-linecap="round"
