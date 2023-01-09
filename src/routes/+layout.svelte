@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 	import { page } from '$app/stores';
+	import type { Navbar } from '$lib/types/components';
 
 	let showMenu = false;
 
-	/**@type import("$lib/types/components").Navbar */
-	const nav = [
+	const nav: Navbar = [
 		{ title: 'Nós', path: '/nos', preload: 'off' },
 		{ title: 'Casório', path: '/casorio', preload: 'off' },
 		{ title: 'Lista Presentes', path: '/presentes', preload: 'hover' }
@@ -16,13 +16,13 @@
 	}
 </script>
 
-<nav class="px-6 py-8 mx-auto md:flex md:justify-between md:items-center md:h-[10vh]">
-	<div class="flex items-center justify-between">
-		<a
-			class="text-xl font-bold text-gray-800 md:text-xl hover:text-blue-400 flex md:flex-col"
-			href="/"
-		>
-			<span class="font-title uppercase">Maycon & <br class="hidden md:block" /> Rafaela</span>
+<nav
+	class="ml-20 mr-28 2xl:mr-32 py-8 mx-auto md:flex md:justify-between md:items-center md:h-[20vh] text-casorioBlue font-title uppercase"
+>
+	<div class="flex items-center justify-between ">
+		<img src="/brasao.svg" alt="Brasão Maycon e Rafaela" class="mr-5" />
+		<a class="text-xl md:leading-5 md:text-xl hover:text-blue-400 flex md:flex-col" href="/">
+			Maycon e <br class="hidden md:block" /> Rafaela
 		</a>
 
 		<div on:click={toggleNavbar} on:keydown={toggleNavbar} class="flex md:hidden">
@@ -49,15 +49,15 @@
 	</div>
 
 	<div
-		class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 {showMenu
+		class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 2xl:space-x-12 md:mt-0 {showMenu
 			? 'flex'
 			: 'hidden'}"
 	>
 		{#each nav as navItem}
 			<a
-				class="text-gray-800 hover:text-blue-400 uppercase {$page.route.id == navItem.path
-					? 'border-b-2 border-red-500'
-					: 'border-b-2 border-transparent'}"
+				class="hover:text-blue-400 uppercase text-base 2xl:text-lg {$page.route.id == navItem.path
+					? 'border-b-4 border-casorioPink'
+					: 'border-b-4 border-transparent'}"
 				href={navItem.path}
 				data-sveltekit-preload-data={navItem.preload}>{navItem.title}</a
 			>
@@ -67,9 +67,10 @@
 
 <slot />
 
+<!-- footer, uncomment if needed
 <footer
-	class="md:h-[10vh] relative w-full flex flex-wrap items-center flex-col justify-center bg-green-500"
+	class="md:max-h-[10vh] md:h-[10vh] relative w-full flex flex-wrap items-center flex-col justify-end font-body text-casorioBlue uppercase text-xs pb-3"
 >
-	<span>Maico e Rafa</span>
 	<span>2023</span>
-</footer>
+	<span>Maico e Rafa</span>
+</footer> -->
