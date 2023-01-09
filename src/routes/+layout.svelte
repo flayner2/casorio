@@ -17,7 +17,8 @@
 </script>
 
 <nav
-	class="ml-20 mr-28 2xl:mr-32 py-8 mx-auto md:flex md:justify-between md:items-center md:h-[20vh] text-casorioBlue font-title uppercase"
+	class="ml-20 mr-20 2xl:mr-32 py-8 mx-auto md:flex md:justify-between md:items-center md:h-[20vh] text-casorioBlue font-title uppercase"
+	id="top"
 >
 	<div class="flex items-center justify-between ">
 		<img src="/brasao.svg" alt="Brasão Maycon e Rafaela" class="mr-5" />
