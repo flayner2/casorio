@@ -5,11 +5,18 @@
 	export let data: PageData;
 	const { gifts } = data;
 
+	const indexes: { [k: string]: number } = {
+		cozinha: 0,
+		casa: 1,
+		quarto: 2,
+		decoração: 3,
+		banheiro: 4
+	};
 	const categories = [
 		...new Set(
 			gifts.map((gift) => gift.category).filter((category): category is string => category !== null)
 		)
-	];
+	].sort((a, b) => indexes[a] - indexes[b]);
 	let checkedCategories = Object.fromEntries(categories.map((key) => [key, false]));
 
 	const prices = gifts.map((gift) => gift.price).filter((price): price is number => price !== null);
@@ -48,7 +55,7 @@
 	<div
 		class="flex flex-col top-4 2xl:sticky justify-between items-center 2xl:h-[98vh] md:h-[145vh] uppercase font-body text-casorioBlue 2xl:w-[24vw] md:w-[30vw] pl-20 2xl:mr-5"
 	>
-		<div class="border-[3px] border-casorioPink w-full p-5 pl-12 pb-8">
+		<div class="border-[3px] border-casorioPink w-full p-5 2xl:pl-12 md:pl-10 pb-8">
 			<p class="mb-5 tracking-widest text-lg">Categoria:</p>
 			<div class="grid grid-cols-2">
 				{#each categories as category}
@@ -64,7 +71,9 @@
 				{/each}
 			</div>
 		</div>
-		<div class=" border-[3px] border-casorioPink w-full pt-5 pl-12 pr-12 pb-8">
+		<div
+			class=" border-[3px] border-casorioPink w-full pt-5 2xl:pl-12 2xl:pr-12 md:pl-10 md:pr-10 pb-8"
+		>
 			<p class="mb-5 tracking-widest text-lg">Valor:</p>
 			<input
 				type="range"
@@ -96,33 +105,41 @@
 		</div>
 	</div>
 
-	<div
-		class="mx-auto 2xl:w-[65vw] md:w-[59vw] overflow-hidden grid grid-cols-4 gap-y-16 font-title uppercase mb-10 h-min"
-	>
-		{#each filteredGifts as gift}
-			<div class="flex flex-col items-center justify-between">
-				<div
-					class="bg-[url('/gift_bg.svg')] bg-no-repeat bg-cover w-48 h-48 flex items-center justify-center mb-1"
-				>
-					<img
-						src={gift.thumbnail}
-						alt="Imagem de um cachorro que não é o Dante"
-						class="object-contain h-40 w-40"
-					/>
-				</div>
-				<p class="text-casorioBlue">{gift.name}</p>
-				<p class="text-casorioBlack font-body mb-1">R$ {gift.price?.toFixed(2)}</p>
-				<a
-					href={gift.purchase_link}
-					target="_blank"
-					rel="noreferrer"
-					class="bg-casorioYellow text-white uppercase text-sm p-1 w-28 h-auto text-center"
-					>Presentear</a
-				>
+	{#if !gifts}
+		<div class="flex justify-center items-center 2xl:w-[65vw] md:w-[59vw] h-min mx-auto">
+			<div
+				class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full border-casorioBlue"
+				role="status"
+			>
+				<span class="hidden">Loading...</span>
 			</div>
-		{/each}
-	</div>
+		</div>
+	{:else}
+		<div
+			class="mx-auto 2xl:w-[65vw] md:w-[59vw] overflow-hidden grid md:grid-cols-4 grid-cols-2 gap-y-16 font-title uppercase mb-10 h-min"
+		>
+			{#each filteredGifts as gift}
+				<div class="flex flex-col items-center justify-between">
+					<div
+						class="bg-[url('/gift_bg.svg')] bg-no-repeat bg-cover w-48 h-48 flex items-center justify-center mb-1"
+					>
+						<img src={gift.thumbnail} alt={gift.name} class="object-contain h-40 w-40" />
+					</div>
+					<p class="text-casorioBlue text-center">{gift.name}</p>
+					<p class="text-casorioBlack font-body mb-1">R$ {gift.price?.toFixed(2)}</p>
+					<a
+						href={gift.purchase_link}
+						target="_blank"
+						rel="noreferrer"
+						class="bg-casorioYellow text-white uppercase text-sm p-1 w-28 h-auto text-center"
+						>Presentear</a
+					>
+				</div>
+			{/each}
+		</div>
+	{/if}
 </div>
+
 {#if yOffset >= 100}
 	<a
 		class="sticky bottom-4 left-[96.5%] content-none rounded-full bg-casorioBlue w-min h-min flex items-center"
