@@ -23,8 +23,8 @@
 	<div class="flex items-center justify-between ">
 		<div class="flex items-center justify-between ml-16 md:m-0">
 			<img src="/brasao.svg" alt="Brasão Maycon e Rafaela" class="mr-5" />
-			<a class="text-lg md:leading-5 md:text-xl hover:text-blue-400 flex md:flex-col" href="/">
-				Maycon e <br /> Rafaela
+			<a class="text-lg md:leading-5 md:text-xl hover:text-blue-400 flex flex-col" href="/">
+				Maycon e <br class="hidden md:block" /> Rafaela
 			</a>
 		</div>
 
