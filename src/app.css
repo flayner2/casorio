@@ -7,7 +7,7 @@
 @layer base {
 	html {
 		font-family: Varela Round, system-ui, sans-serif;
-		@apply bg-bg;
+		@apply bg-bg scroll-smooth;
 	}
 
 	h1,
