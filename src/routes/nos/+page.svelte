@@ -3,10 +3,10 @@
 </svelte:head>
 
 <!-- NOTES:
-	-2xl: 1920x1080
-	-xl: 1366x768
-	-lg: iPad
-	-sm or nothing: mobile
+-2xl: 1920x1080
+-xl: 1366x768
+-lg: iPad
+-sm or nothing: mobile
 -->
 
 <div class="grid grid-rows-4 grid-cols-4 w-full h-[80vh] 2xl:pl-20 2xl:pr-20 gap-0">
