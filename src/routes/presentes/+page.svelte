@@ -48,7 +48,7 @@
 <svelte:window bind:scrollY={yOffset} />
 
 <svelte:head>
-	<title>Casório do Mayco e da Rafa</title>
+	<title>MAYCOELA | LISTA PRESENTES</title>
 </svelte:head>
 
 <div class="flex justify-around pt-10 h-full">
