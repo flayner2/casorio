@@ -100,7 +100,7 @@
 				links para fazer um <span class="text-casorioRed">pix</span> para o Maycon no valor do produto.
 				Muito obrigado por apoiarem nossa nova jornada juntos!
 			</p>
-			<p class="self-end mt-6 pr-2">Com amor</p>
+			<p class="self-end mt-6 pr-2">Com amor,</p>
 			<p class="self-end pr-2">Rafaela e Maycon</p>
 		</div>
 	</div>
@@ -116,7 +116,7 @@
 		</div>
 	{:else}
 		<div
-			class="mx-auto 2xl:w-[65vw] md:w-[59vw] overflow-hidden grid md:grid-cols-4 grid-cols-2 gap-y-16 font-title uppercase mb-10 h-min"
+			class="mx-auto 2xl:w-[65vw] md:w-[59vw] overflow-hidden grid xl:grid-cols-4 grid-cols-2 gap-y-16 font-title uppercase mb-10 h-min"
 		>
 			{#each filteredGifts as gift}
 				<div class="flex flex-col items-center justify-between">
