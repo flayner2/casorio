@@ -23,12 +23,15 @@
 	<div class="flex items-center justify-between ">
 		<div class="flex items-center justify-between ml-16 md:m-0">
 			<img src="/brasao.svg" alt="Brasão Maycon e Rafaela" class="mr-5" />
-			<a class="text-lg md:leading-5 md:text-xl hover:text-blue-400 flex flex-col" href="/">
+			<a
+				class="text-lg leading-5 md:leading-5 md:text-xl hover:text-blue-400 flex flex-col"
+				href="/"
+			>
 				Maycon e <br class="hidden md:block" /> Rafaela
 			</a>
 		</div>
 
-		<div on:click={toggleNavbar} on:keydown={toggleNavbar} class="flex md:hidden">
+		<div on:click={toggleNavbar} on:keydown={toggleNavbar} class="flex z-10 md:hidden">
 			<button
 				type="button"
 				class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
@@ -38,7 +41,7 @@
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke-width="2.5"
-					class="w-6 h-6 stroke-casorioPink"
+					class="w-6 h-6 {showMenu ? 'stroke-casorioBlue' : 'stroke-casorioPink'}"
 				>
 					<path
 						stroke-linecap="round"
@@ -51,17 +54,25 @@
 	</div>
 
 	<div
-		class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 2xl:space-x-12 md:mt-0 {showMenu
+		class="flex-col w-screen h-screen fixed top-0 left-0 bg-bgAlt items-center justify-start pt-40 space-y-8 md:pt-0 md:relative md:bg-transparent md:w-auto md:h-auto md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 2xl:space-x-12 md:mt-0 {showMenu
 			? 'flex'
 			: 'hidden'}"
 	>
+		<a
+			class="hover:text-blue-400 uppercase text-base 2xl:text-lg {$page.route.id == '/'
+				? 'border-b-4 border-casorioPink'
+				: 'border-b-4 border-transparent'}"
+			href="/"
+			on:click={toggleNavbar}>Home</a
+		>
 		{#each nav as navItem}
 			<a
 				class="hover:text-blue-400 uppercase text-base 2xl:text-lg {$page.route.id == navItem.path
 					? 'border-b-4 border-casorioPink'
 					: 'border-b-4 border-transparent'}"
 				href={navItem.path}
-				data-sveltekit-preload-data={navItem.preload}>{navItem.title}</a
+				data-sveltekit-preload-data={navItem.preload}
+				on:click={toggleNavbar}>{navItem.title}</a
 			>
 		{/each}
 	</div>
