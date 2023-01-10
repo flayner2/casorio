@@ -52,15 +52,15 @@
 
 	input[type='range']::-webkit-slider-thumb {
 		-webkit-appearance: none;
-		@apply rounded-full border-[1px] border-casorioBlue 2xl:h-4 2xl:w-4 md:h-3 md:w-3 bg-casorioBlue cursor-pointer 2xl:mt-[-0.45rem] md:mt-[-0.25rem];
+		@apply rounded-full border-[1px] border-casorioBlue 2xl:h-4 2xl:w-4 h-3 w-3 bg-casorioBlue cursor-pointer 2xl:mt-[-0.45rem] mt-[-0.25rem];
 	}
 
 	input[type='range']::-moz-range-thumb {
-		@apply rounded-full border-[1px] border-casorioBlue 2xl:h-4 2xl:w-4 md:h-3 md:w-3 bg-casorioBlue cursor-pointer;
+		@apply rounded-full border-[1px] border-casorioBlue 2xl:h-4 2xl:w-4 h-3 w-3 bg-casorioBlue cursor-pointer;
 	}
 
 	input[type='range']::-ms-thumb {
-		@apply rounded-full border-[1px] border-casorioBlue 2xl:h-4 2xl:w-4 md:h-3 md:w-3 bg-casorioBlue cursor-pointer;
+		@apply rounded-full border-[1px] border-casorioBlue 2xl:h-4 2xl:w-4 h-3 w-3 bg-casorioBlue cursor-pointer;
 	}
 
 	/* Checkboxes */
