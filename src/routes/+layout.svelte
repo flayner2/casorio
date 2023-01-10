@@ -27,7 +27,7 @@
 				class="text-lg leading-5 md:leading-5 md:text-xl hover:text-blue-400 flex flex-col"
 				href="/"
 			>
-				Maycon e <br class="hidden md:block" /> Rafaela
+				Maycon e <br /> Rafaela
 			</a>
 		</div>
 
