@@ -11,7 +11,8 @@ const themeYellow = {
 	casorioPink: '#F270A7',
 	casorioBlack: '#4D4A44',
 	molduraBlue: '#328FB6',
-	molduraRed: '#EC5556'
+	molduraRed: '#EC5556',
+	molduraYellow: '#F2CA2B'
 };
 
 const themePink = {
@@ -23,7 +24,8 @@ const themePink = {
 	casorioPink: '#E862A9',
 	casorioBlack: '#4A4144',
 	molduraBlue: '#328FB6',
-	molduraRed: '#EC5556'
+	molduraRed: '#EC5556',
+	molduraYellow: '#F2CA2B'
 };
 
 const theme = 'yellow';
