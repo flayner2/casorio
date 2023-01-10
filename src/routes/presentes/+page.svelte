@@ -252,7 +252,7 @@
 		: 'flex'} flex-col items-center lg:items-start lg:flex-row justify-around pt-10 h-full"
 >
 	<div
-		class="flex lg:flex-col 2xl:top-4 2xl:sticky justify-around lg:justify-between items-center space-x-9 mt-[-2em] mb-6 lg:mt-0 lg:mb-0 w-[80%] h-full 2xl:h-[98vh] lg:h-[145vh] uppercase font-body text-casorioBlue text-sm lg:text-base 2xl:w-[24vw] lg:w-[30vw] lg:pl-20 2xl:mr-5"
+		class="flex lg:flex-col 2xl:top-4 2xl:sticky justify-around lg:justify-between items-center space-x-9 lg:space-x-0 mt-[-2em] mb-6 lg:mt-0 lg:mb-0 w-[80%] h-full 2xl:h-[98vh] lg:h-[145vh] uppercase font-body text-casorioBlue text-sm lg:text-base 2xl:w-[24vw] lg:w-[30vw] lg:pl-20 2xl:mr-5"
 	>
 		<!-- Mobile -->
 		<div
@@ -334,7 +334,7 @@
 		</div>
 	{:else}
 		<div
-			class="w-full pr-4 pl-4 lg:mr-0 lg:ml-0 2xl:w-[65vw] lg:w-[62vw] overflow-hidden grid xl:grid-cols-4 grid-cols-2 gap-y-16 font-title lg:text-base text-sm uppercase mb-10 h-min"
+			class="w-full pr-4 pl-4 lg:pr-0 lg:pl-0 lg:mx-auto 2xl:w-[65vw] lg:w-[59vw] overflow-hidden grid xl:grid-cols-4 grid-cols-2 gap-y-16 font-title lg:text-base text-sm uppercase mb-10 h-min"
 		>
 			{#each filteredGifts as gift}
 				<div class="flex flex-col items-center justify-between">
