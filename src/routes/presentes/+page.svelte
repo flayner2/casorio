@@ -12,14 +12,12 @@
 		decoração: 3,
 		banheiro: 4
 	};
-	const categories = [
-		...new Set(
-			gifts.map((gift) => gift.category).filter((category): category is string => category !== null)
-		)
-	].sort((a, b) => indexes[a] - indexes[b]);
+	const categories = [...new Set(gifts.map((gift) => gift.category))].sort(
+		(a, b) => indexes[a] - indexes[b]
+	);
 	let checkedCategories = Object.fromEntries(categories.map((key) => [key, false]));
 
-	const prices = gifts.map((gift) => gift.price).filter((price): price is number => price !== null);
+	const prices = gifts.map((gift) => gift.price);
 	const minPrice = Math.min(...prices);
 	const maxPrice = Math.max(...prices);
 
@@ -27,16 +25,10 @@
 
 	function filterGifts(price: number, categories: { [k: string]: boolean }): Gifts {
 		if (Object.values(categories).every((category) => !category)) {
-			return gifts.filter((gift) => gift.price !== null && gift.price <= price);
+			return gifts.filter((gift) => gift.price <= price);
 		}
 
-		return gifts.filter(
-			(gift) =>
-				gift.price !== null &&
-				gift.price <= price &&
-				gift.category !== null &&
-				categories[gift.category]
-		);
+		return gifts.filter((gift) => gift.price <= price && categories[gift.category]);
 	}
 
 	$: filteredGifts = filterGifts(sliderValue, checkedCategories);
@@ -356,7 +348,7 @@
 						/>
 					</div>
 					<p class="text-casorioBlue text-center">{gift.name}</p>
-					<p class="text-casorioBlack font-body mb-1">R$ {gift.price?.toFixed(2)}</p>
+					<p class="text-casorioBlack font-body mb-1">R$ {gift.price.toFixed(2)}</p>
 					<a
 						href={gift.purchase_link}
 						target="_blank"
