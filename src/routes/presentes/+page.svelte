@@ -76,7 +76,11 @@
 		? 'flex'
 		: 'hidden'} z-20 w-screen h-screen fixed top-0 left-0 bg-bgAlt uppercase items-center justify-evenly flex-col"
 >
-	<div on:click={toggleReadme} on:keydown={toggleReadme} class="flex self-end mr-6 z-20 mb-[-4em]">
+	<div
+		on:click={toggleReadme}
+		on:keydown={toggleReadme}
+		class="flex self-end mr-6 md:mr-10 z-20 mb-[-4em]"
+	>
 		<button
 			type="button"
 			class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
@@ -107,9 +111,9 @@
 		</button>
 	</div>
 	<div class="flex flex-col items-center justify-start h-[80vh] space-y-2">
-		<p class="text-casorioBlue">Leia me</p>
+		<p class="text-casorioBlue md:text-lg">Leia me</p>
 		<div
-			class=" bg-[url('post_it.svg')] bg-contain bg-no-repeat bg-center text-xs p-16 pl-20 pr-20 tracking-widest text-casorioBlack"
+			class=" bg-[url('post_it.svg')] bg-contain bg-no-repeat bg-center text-xs p-16 pl-20 pr-20 md:p-20 md:pl-[17rem] md:pr-64 md:h-[60%] tracking-widest text-casorioBlack"
 		>
 			<p class="mt-6">
 				Essa lista de presentes é apenas um conjunto de ideias para ajudar àqueles que desejam nos
@@ -131,7 +135,11 @@
 		? 'flex'
 		: 'hidden'} z-20 w-screen h-screen fixed top-0 left-0 bg-bgAlt uppercase items-center justify-evenly flex-col"
 >
-	<div on:click={toggleFilter} on:keydown={toggleFilter} class="flex self-end mr-6 z-20 mb-[-4em]">
+	<div
+		on:click={toggleFilter}
+		on:keydown={toggleFilter}
+		class="flex self-end mr-6 md:mr-10 z-20 mb-[-4em]"
+	>
 		<button
 			type="button"
 			class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
@@ -164,7 +172,7 @@
 	<div class="flex flex-col items-center justify-start h-[80vh] space-y-10 text-casorioBlue">
 		{#if filterOpen && categoriesOpen}
 			<!-- Categories drawer -->
-			<div class="flex w-[80vw] items-center justify-start space-x-[30%]">
+			<div class="flex w-[80vw] items-center justify-start space-x-[30%] md:space-x-[40%]">
 				<img
 					src="/arrow_left.svg"
 					alt="Ícone de seta para a esquerda"
@@ -189,7 +197,7 @@
 			</div>
 		{:else if filterOpen && valueOpen}
 			<!-- Value drawer -->
-			<div class="flex w-[80vw] items-center justify-start space-x-[40%]">
+			<div class="flex w-[80vw] items-center justify-start space-x-[40%] md:space-x-[45%]">
 				<img
 					src="/arrow_left.svg"
 					alt="Ícone de seta para a esquerda"
@@ -252,11 +260,11 @@
 		: 'flex'} flex-col items-center lg:items-start lg:flex-row justify-around pt-10 h-full"
 >
 	<div
-		class="flex lg:flex-col 2xl:top-4 2xl:sticky justify-around lg:justify-between items-center space-x-9 lg:space-x-0 mt-[-2em] mb-6 lg:mt-0 lg:mb-0 w-[80%] h-full 2xl:h-[98vh] lg:h-[145vh] uppercase font-body text-casorioBlue text-sm lg:text-base 2xl:w-[24vw] lg:w-[30vw] lg:pl-20 2xl:mr-5"
+		class="flex lg:flex-col 2xl:top-4 2xl:sticky justify-around lg:justify-between md:justify-end items-center space-x-9 lg:space-x-0 mt-[-2em] mb-6 lg:mt-0 lg:mb-0 md:space-x-10 md:mr-16 w-[80%] h-full 2xl:h-[98vh] lg:h-[110vh] xl:h-[145vh] uppercase font-body text-casorioBlue text-sm lg:text-base 2xl:w-[24vw] xl:w-[30vw] lg:w-[35vw] lg:pl-10 xl:pl-20 2xl:mr-5"
 	>
 		<!-- Mobile -->
 		<div
-			class="lg:hidden border-[2px] border-casorioPink flex justify-around items-center pr-3 pl-3 p-0.5 cursor-pointer w-36"
+			class="lg:hidden border-[2px] border-casorioPink flex justify-around items-center pr-3 pl-3 p-0.5 cursor-pointer w-36 md:w-[10.5rem] md:pr-7 md:pl-7"
 			on:click={toggleReadme}
 			on:keydown={toggleReadme}
 		>
@@ -264,7 +272,7 @@
 			<p>Leia me</p>
 		</div>
 		<div
-			class="lg:hidden border-[2px] border-casorioPink flex justify-around items-center pr-4 pl-4 p-0.5 cursor-pointer w-36"
+			class="lg:hidden border-[2px] border-casorioPink flex justify-around items-center pr-4 pl-4 p-0.5 cursor-pointer w-36 md:w-[10.5rem] md:pr-8 md:pl-8"
 			on:click={toggleFilter}
 			on:keydown={toggleFilter}
 		>
@@ -308,7 +316,7 @@
 			</div>
 		</div>
 		<div
-			class="hidden lg:flex bg-[url('post_it.svg')] bg-contain bg-no-repeat 2xl:w-[25vw] 2xl:h-[60vh] lg:w-[30vw] lg:h-[85vh] bg-center text-xs flex-col justify-center items-center p-16 pl-20 pr-20 tracking-widest 2xl:leading-6 text-casorioBlack"
+			class="hidden lg:flex bg-[url('post_it.svg')] bg-contain bg-no-repeat 2xl:w-[25vw] 2xl:h-[60vh] xl:w-[30vw] xl:h-[85vh] lg:w-[38vw] lg:h-[65vh] bg-center text-xs flex-col justify-center items-center p-16 pl-20 pr-20 tracking-widest 2xl:leading-6 text-casorioBlack"
 		>
 			<p class="mt-6">
 				Essa lista de presentes é apenas um conjunto de ideias para ajudar àqueles que desejam nos
@@ -334,17 +342,17 @@
 		</div>
 	{:else}
 		<div
-			class="w-full pr-4 pl-4 lg:pr-0 lg:pl-0 lg:mx-auto 2xl:w-[65vw] lg:w-[59vw] overflow-hidden grid xl:grid-cols-4 grid-cols-2 gap-y-16 font-title lg:text-base text-sm uppercase mb-10 h-min"
+			class="w-full pr-4 pl-4 lg:pr-0 lg:pl-0 lg:mx-auto 2xl:w-[65vw] xl:w-[59vw] lg:w-[55vw] md:w-[80vw] overflow-hidden grid xl:grid-cols-4 md:grid-cols-3 lg:grid-cols-2 grid-cols-2 gap-y-16 font-title lg:text-base text-sm uppercase mb-10 h-min"
 		>
 			{#each filteredGifts as gift}
 				<div class="flex flex-col items-center justify-between">
 					<div
-						class="bg-[url('/gift_bg.svg')] bg-no-repeat bg-cover w-32 h-32 lg:w-48 lg:h-48 flex items-center justify-center mb-1"
+						class="bg-[url('/gift_bg.svg')] bg-no-repeat bg-cover w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 xl:w-48 xl:h-48 flex items-center justify-center mb-1"
 					>
 						<img
 							src={gift.thumbnail}
 							alt={gift.name}
-							class="object-contain w-28 h-28 lg:h-40 lg:w-40"
+							class="object-contain w-28 h-28 lg:h-44 lg:w-44 xl:h-40 xl:w-40"
 						/>
 					</div>
 					<p class="text-casorioBlue text-center">{gift.name}</p>
@@ -364,7 +372,7 @@
 
 {#if yOffset >= 100}
 	<a
-		class="sticky bottom-4 lg:left-[96.5%] left-[90%] content-none rounded-full bg-transparent border-casorioPink border-[2px] w-min h-min flex items-center"
+		class="sticky bottom-4 xl:left-[96.5%] left-[90%] lg:left-[94%] content-none rounded-full bg-transparent border-casorioPink border-[2px] w-min h-min flex items-center"
 		href="#top"
 	>
 		<svg
