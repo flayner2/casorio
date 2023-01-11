@@ -17,7 +17,7 @@
 
 <!-- Mobile -->
 <div
-	class="grid grid-cols-2 auto-rows-fr lg:hidden w-full pl-8 pr-8 h-[180vh] gap-x-5 gap-y-4 mb-10"
+	class="grid grid-cols-2 auto-rows-fr lg:hidden w-full pl-8 pr-8 h-[180vh] gap-x-5 gap-y-4 mb-10 cursor-default"
 >
 	<!-- Row 1 - left -->
 	<div
@@ -94,7 +94,9 @@
 </div>
 
 <!-- Larger screens (iPad + desktop) -->
-<div class="hidden lg:grid grid-rows-4 grid-cols-4 w-full h-[80vh] 2xl:pl-20 2xl:pr-20 gap-0">
+<div
+	class="hidden lg:grid grid-rows-4 grid-cols-4 w-full h-[80vh] 2xl:pl-20 2xl:pr-20 gap-0 cursor-default"
+>
 	<!-- Top left -->
 	<div
 		class="group border-[1px] border-casorioBlack row-start-1 row-end-3 col-start-1 col-end-2 w-[95%] h-[60%] 2xl:ml-[65%] md:ml-[70%] mt-10 hover:bg-molduraBlue hover:flex hover:items-center hover:justify-center"
