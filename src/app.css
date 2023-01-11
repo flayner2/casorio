@@ -10,6 +10,10 @@
 		@apply bg-bg scroll-smooth;
 	}
 
+	html.alt {
+		@apply bg-bgAlt;
+	}
+
 	h1,
 	h2,
 	h3,

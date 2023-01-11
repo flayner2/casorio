@@ -1,6 +1,9 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import type { Gifts } from '$lib/types/database';
+	import { bodyColor } from '$lib/bodyColor';
+
+	bodyColor.update(() => '');
 
 	export let data: PageData;
 	const { gifts } = data;

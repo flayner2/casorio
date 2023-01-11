@@ -1,3 +1,9 @@
+<script>
+	import { bodyColor } from '$lib/bodyColor';
+
+	bodyColor.update(() => '');
+</script>
+
 <svelte:head>
 	<title>MAYCOELA | NÓS</title>
 </svelte:head>

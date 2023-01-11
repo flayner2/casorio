@@ -1,7 +1,18 @@
 <script lang="ts">
 	import '../app.css';
 	import { page } from '$app/stores';
+	import { bodyColor } from '$lib/bodyColor';
+	import { browser } from '$app/environment';
 	import type { Navbar } from '$lib/types/components';
+
+	if (browser) {
+		let bodyClass: string;
+
+		bodyColor.subscribe((color) => {
+			bodyClass = color;
+			window.document.getElementsByTagName('html')[0].setAttribute('class', bodyClass);
+		});
+	}
 
 	let showMenu = false;
 

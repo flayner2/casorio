@@ -1,3 +1,9 @@
+<script>
+	import { bodyColor } from '$lib/bodyColor';
+
+	bodyColor.update(() => 'alt');
+</script>
+
 <svelte:head>
 	<title>MAYCOELA</title>
 </svelte:head>
