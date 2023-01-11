@@ -228,7 +228,7 @@
 		{:else if filterOpen}
 			<!-- Filter drawer -->
 			<p class="">Filtrar</p>
-			<div class="w-[80vw] flex flex-col justify-between h-min space-y-6">
+			<div class="w-[80vw] flex flex-col justify-between h-min space-y-6 cursor-default">
 				<div
 					class="border-b-[2px] border-casorioPink w-full flex justify-between items-center"
 					on:click={toggleCategories}
