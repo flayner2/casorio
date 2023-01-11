@@ -17,7 +17,7 @@
 
 <!-- Mobile -->
 <div
-	class="grid grid-cols-2 auto-rows-fr lg:hidden w-full pl-8 pr-8 h-[180vh] gap-x-5 gap-y-4 mb-10 cursor-default"
+	class="grid grid-cols-2 auto-rows-fr lg:hidden w-full md:w-[90%] md:mx-auto pl-8 pr-8 h-[180vh] gap-x-5 gap-y-4 mb-10 cursor-default"
 >
 	<!-- Row 1 - left -->
 	<div
