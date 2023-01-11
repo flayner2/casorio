@@ -381,7 +381,7 @@
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
-			class="w-8 h-8 fill-casorioPink stroke-casorioPink stroke-0"
+			class="2xl:w-10 2xl:h-10 w-8 h-8 fill-casorioPink stroke-casorioPink stroke-0"
 		>
 			<path
 				fill-rule="evenodd"
