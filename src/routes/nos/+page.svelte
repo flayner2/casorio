@@ -23,9 +23,9 @@
 	<div
 		class="group border-[1px] border-casorioBlack hover:bg-casorioPink hover:flex hover:items-center hover:justify-center"
 	>
-		<span class="group-hover:inline hidden text-white uppercase font-body text-xs p-10">
+		<p class="group-hover:block hidden text-white uppercase font-body text-xs p-10">
 			colecionamos livros
-		</span>
+		</p>
 	</div>
 	<!-- Row 1 - right -->
 	<div
@@ -125,7 +125,7 @@
 	</div>
 	<!-- Top right ovoid -->
 	<div
-		class="group border-[1px] rounded-[50%] border-casorioBlack row-start-1 row-end-3 col-start-4 col-end-4 2xl:w-[30%] lg:w-[28%] xl:w-[25%] lg:h-[40%] xl:h-[50%] 2xl:ml-[5%] md:ml-0 2xl:mt-10 md:mt-8 hover:bg-molduraBlue hover:flex hover:items-center hover:justify-center"
+		class="group border-[1px] rounded-[50%] border-casorioBlack row-start-1 row-end-3 col-start-4 col-end-4 2xl:w-[30%] lg:w-[30%] xl:w-[25%] lg:h-[40%] xl:h-[50%] 2xl:ml-[5%] md:ml-0 2xl:mt-10 md:mt-8 hover:bg-molduraBlue hover:flex hover:items-center hover:justify-center"
 	>
 		<p class="group-hover:block hidden text-white uppercase font-body md:text-xs 2xl:text-sm p-2">
 			estamos a quase 8 anos juntos
@@ -141,7 +141,7 @@
 	</div>
 	<!-- Center ovoid -->
 	<div
-		class="border-[1px] rounded-[50%] border-casorioBlack row-start-2 row-end-4 col-start-2 col-end-4 2xl:w-[30%] md:w-[20%] h-[100%] self-center justify-self-center md:mt-[2%] 2xl:mt-0"
+		class="border-[1px] rounded-[50%] border-casorioBlack row-start-2 row-end-4 col-start-2 col-end-4 2xl:w-[30%] xl:w-[20%] lg:w-[30%] lg:h-[90%] xl:h-[100%] self-center justify-self-center md:mt-[2%] 2xl:mt-0"
 	/>
 	<!-- Center left -->
 	<div
