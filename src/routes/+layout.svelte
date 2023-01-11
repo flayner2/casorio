@@ -59,7 +59,7 @@
 			: 'hidden'}"
 	>
 		<a
-			class="hover:text-blue-400 uppercase text-base 2xl:text-lg {$page.route.id == '/'
+			class="md:hidden hover:text-blue-400 uppercase text-base 2xl:text-lg {$page.route.id == '/'
 				? 'border-b-4 border-casorioPink'
 				: 'border-b-4 border-transparent'}"
 			href="/"
