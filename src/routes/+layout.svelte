@@ -34,7 +34,10 @@
 	<div class="flex items-center justify-between ">
 		<div class="flex items-center justify-between ml-16 md:m-0">
 			<img src="/brasao.svg" alt="Brasão Maycon e Rafaela" class="mr-5" />
-			<a class="text-lg leading-5 md:leading-5 md:text-xl flex flex-col" href="/">
+			<a
+				class="text-lg leading-5 md:leading-5 md:text-xl flex flex-col hover:brightness-125 transition-all"
+				href="/"
+			>
 				Maycon e <br /> Rafaela
 			</a>
 		</div>

@@ -288,14 +288,15 @@
 			<p class="mb-5 tracking-widest text-lg">Categoria:</p>
 			<div class="grid grid-cols-2">
 				{#each categories as category}
-					<div class="h-min">
+					<div class="h-min cursor-pointer">
 						<input
 							type="checkbox"
 							name={category}
 							id={category}
 							bind:checked={checkedCategories[category]}
+							class="cursor-pointer"
 						/>
-						<label for={category} class="text-sm tracking-widest">{category}</label>
+						<label for={category} class="text-sm tracking-widest cursor-pointer">{category}</label>
 					</div>
 				{/each}
 			</div>
@@ -364,7 +365,7 @@
 						href={gift.purchase_link}
 						target="_blank"
 						rel="noreferrer"
-						class="bg-casorioYellow text-white uppercase lg:text-sm text-xs lg:pl-1 lg:pr-1 p-1 pl-2 pr-2 lg:w-28 w-min h-auto text-center"
+						class="bg-casorioYellow text-white uppercase lg:text-sm text-xs lg:pl-1 lg:pr-1 p-1 pl-2 pr-2 lg:w-28 w-min h-auto text-center hover:bg-casorioPink transition-all"
 						>Presentear</a
 					>
 				</div>

@@ -25,11 +25,12 @@
 			Após quase oito anos, finalmente vamos nos casar! Estamos muito felizes com a chegada deste
 			momento tão aguardado, e gostaríamos de compartilhar um pouco da nossa alegria com vocês.
 			Nesse site vocês encontram alguns fatos interessantes sobre
-			<a class="text-casorioRed" href="/nos">nós</a>, podem conferir informações importantes sobre a
-			data e local do <a class="text-casorioRed" href="/casorio">casório</a> ou, se estiverem se
-			sentindo generosos, podem nos agraciar com um dos presentes da nossa
-			<a class="text-casorioRed" href="/presentes">lista</a>. Espero que possam vir nos prestigiar
-			nessa data maravilhosa!
+			<a class="text-casorioRed hover:text-casorioBlue transition-all" href="/nos">nós</a>, podem
+			conferir informações importantes sobre a data e local do
+			<a class="text-casorioRed hover:text-casorioBlue transition-all" href="/casorio">casório</a>
+			ou, se estiverem se sentindo generosos, podem nos agraciar com um dos presentes da nossa
+			<a class="text-casorioRed hover:text-casorioBlue transition-all" href="/presentes">lista</a>.
+			Espero que possam vir nos prestigiar nessa data maravilhosa!
 		</p>
 		<p class="self-end">Com amor,</p>
 		<p class="self-end">Maycon e Rafa</p>
