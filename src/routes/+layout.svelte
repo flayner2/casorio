@@ -34,19 +34,13 @@
 	<div class="flex items-center justify-between ">
 		<div class="flex items-center justify-between ml-16 md:m-0">
 			<img src="/brasao.svg" alt="Brasão Maycon e Rafaela" class="mr-5" />
-			<a
-				class="text-lg leading-5 md:leading-5 md:text-xl hover:text-blue-400 flex flex-col"
-				href="/"
-			>
+			<a class="text-lg leading-5 md:leading-5 md:text-xl flex flex-col" href="/">
 				Maycon e <br /> Rafaela
 			</a>
 		</div>
 
 		<div on:click={toggleNavbar} on:keydown={toggleNavbar} class="flex z-10 md:hidden">
-			<button
-				type="button"
-				class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
-			>
+			<button type="button" class="focus:outline-none">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
@@ -70,7 +64,7 @@
 			: 'hidden'}"
 	>
 		<a
-			class="md:hidden hover:text-blue-400 uppercase text-base 2xl:text-lg {$page.route.id == '/'
+			class="md:hidden uppercase text-base 2xl:text-lg {$page.route.id == '/'
 				? 'border-b-4 border-casorioPink'
 				: 'border-b-4 border-transparent'}"
 			href="/"
@@ -78,9 +72,9 @@
 		>
 		{#each nav as navItem}
 			<a
-				class="hover:text-blue-400 uppercase text-base 2xl:text-lg {$page.route.id == navItem.path
+				class="uppercase text-base 2xl:text-lg {$page.route.id == navItem.path
 					? 'border-b-4 border-casorioPink'
-					: 'border-b-4 border-transparent'}"
+					: 'border-b-4 border-transparent'} lg:hover:border-b-4 lg:hover:border-casorioPink lg:transition-all"
 				href={navItem.path}
 				data-sveltekit-preload-data={navItem.preload}
 				on:click={toggleNavbar}>{navItem.title}</a
