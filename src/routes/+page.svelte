@@ -6,7 +6,11 @@
 	class="flex md:flex-row flex-col flex-intial items-center justify-around md:h-[80vh] mr-10 ml-10 md:mr-40 md:ml-36 max-w-[100vw] mt-[-2rem] 2xl:mt-[-4rem]"
 >
 	<div class="md:pl-10 mb-4 md:mb-0">
-		<img src="/home_img.png" alt="Test" class="h-full 2xl:h-[40em]" />
+		<img
+			src="/home_img.png"
+			alt="Ilustração das nossas alianças de noivado"
+			class="h-full 2xl:h-[40em]"
+		/>
 	</div>
 	<div class="w-full md:pl-10 md:w-1/2 2xl:w-2/5">
 		<p
