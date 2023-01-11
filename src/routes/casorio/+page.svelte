@@ -9,10 +9,10 @@
 </svelte:head>
 
 <div
-	class="grid grid-rows-3 justify-items-center gap-y-10 lg:gap-y-0 lg:grid-cols-3 lg:grid-rows-1 w-full lg:pl-20 lg:pr-20 xl:h-[80vh] lg:h-[50vh]"
+	class="grid grid-rows-3 justify-items-center gap-y-10 lg:gap-y-0 lg:grid-cols-3 lg:grid-rows-1 w-full lg:pl-20 lg:pr-20 xl:h-[80vh] lg:h-[50vh] 2xl:h-[70vh]"
 >
 	<div
-		class="flex flex-col items-center w-[90%] lg:w-auto 2xl:max-h-[80vh] justify-center lg:mt-[-5em] space-y-4 lg:space-y-0"
+		class="flex flex-col items-center w-[90%] lg:w-auto justify-center lg:self-center space-y-4 lg:space-y-0"
 	>
 		<img src="/data.svg" alt="Data do casamento" class="lg:mb-2 w-[80%] lg:w-[70%]" />
 		<p class="w-[67%] lg:w-[20em] tracing-widest text-xs 2xl:text-base text-casorioBlue uppercase">
@@ -24,11 +24,9 @@
 	<img
 		src="/mapa.png"
 		alt="Mapa do casamento"
-		class="w-[60%] lg:w-auto lg:h-auto lg:pl-4 lg:pr-4 lg:self-center"
+		class="w-[60%] lg:w-auto lg:pl-4 lg:pr-4 lg:self-center"
 	/>
-	<div
-		class="flex flex-col items-start justify-center max-h-[80vh] mt-[-3em] 2xl:ml-20 xl:ml-16 lg:ml-8"
-	>
+	<div class="flex flex-col items-start justify-center self-center 2xl:ml-20 xl:ml-16 lg:ml-8">
 		<div class="flex flex-col items-start justify-between mb-10">
 			<div
 				class="flex justify-between items-center text-xl 2xl:text-2xl font-title text-casorioPink uppercase font-bold mb-3 2xl:mb-5"
